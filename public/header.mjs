@@ -19,8 +19,6 @@ function createNavbar() {
         </nav>
     `).firstElementChild;
 
-    console.log("screen width is", window.innerWidth);
-
     const navLinks = document.createElement("ul");
     navLinks.className = "nav-links hidden";
 

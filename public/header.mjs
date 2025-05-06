@@ -44,20 +44,31 @@ function createNavbar() {
     const toggleButton = navbar.querySelector(".menu-toggle");
     const darkModeToggle = navbar.querySelector(".dark-mode-toggle input");
 
-    // Dark mode toggle
+    // Dark mode toggle with local storage
     darkModeToggle.addEventListener("change", () => {
-        console.log("Dark mode toggle clicked");
-        document.body.classList.toggle("dark-mode");
-        console.log("Dark mode class added:", document.body.classList.contains("dark-mode"));
+        if (darkModeToggle.checked) {
+            document.body.classList.add("dark-mode");
+            localStorage.setItem("darkMode", "on");
+        } else {
+            document.body.classList.remove("dark-mode");
+            localStorage.setItem("darkMode", "off");
+        }
     });
 
-    // 1. Toggle nav visibility on menu button click
+    // Read local storage for dark mode setting
+    const darkMode = localStorage.getItem("darkMode");
+    if (darkMode === "on") {
+        darkModeToggle.checked = true;
+        document.body.classList.add("dark-mode");
+    }
+
+    // Toggle nav visibility on menu button click
     toggleButton.addEventListener("click", () => {
         console.log("Menu toggle clicked");
         navLinks.classList.toggle("hidden");
     });
 
-    // 2. Close nav if a body click occurs outside the navbar
+    // Close nav if a body click occurs outside the navbar
     document.body.addEventListener("click", (event) => {
         const clickedInsideNavbar = navbar.contains(event.target);
         if (!clickedInsideNavbar) {

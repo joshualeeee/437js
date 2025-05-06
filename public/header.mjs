@@ -19,6 +19,8 @@ function createNavbar() {
         </nav>
     `).firstElementChild;
 
+    console.log("screen width is", window.innerWidth);
+
     const navLinks = document.createElement("ul");
     navLinks.className = "nav-links hidden";
 
@@ -40,6 +42,14 @@ function createNavbar() {
     navbar.appendChild(navLinks);
 
     const toggleButton = navbar.querySelector(".menu-toggle");
+    const darkModeToggle = navbar.querySelector(".dark-mode-toggle input");
+
+    // Dark mode toggle
+    darkModeToggle.addEventListener("change", () => {
+        console.log("Dark mode toggle clicked");
+        document.body.classList.toggle("dark-mode");
+        console.log("Dark mode class added:", document.body.classList.contains("dark-mode"));
+    });
 
     // 1. Toggle nav visibility on menu button click
     toggleButton.addEventListener("click", () => {

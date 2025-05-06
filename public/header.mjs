@@ -1,8 +1,5 @@
 import { toHtmlElement } from './indexToHTML.mjs'
 
-/**
- * Creates the full navbar as a DOM element.
- */
 function createNavbar() {
     const navbar = toHtmlElement(`
         <nav class="navbar">

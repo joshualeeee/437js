@@ -1,0 +1,127 @@
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap');
+
+:root {
+    /* Color Tokens */
+    --color-background: #D3FAD6;
+    --color-text: #605C48;
+    --color-heading-bg: #D1EFB5;
+    --color-subheading-bg: #EDEBA0;
+    --color-navbar: #C3C48D;
+    --color-link: #BD1F00;
+    --color-link-hover: #8B1500;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Base styles */
+body {
+    background-color: var(--color-background);
+    color: var(--color-text);
+    font-family: 'Quicksand', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.content {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Headings */
+h1 {
+    background-color: var(--color-heading-bg);
+    padding: 15px;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h2 {
+    background-color: var(--color-subheading-bg);
+    padding: 10px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Navigation */
+.navbar {
+    background-color: var(--color-navbar);
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.nav-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 2rem;
+}
+
+/* Contact Information */
+dl {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 1rem 2rem;
+    padding: 0.5rem 0;
+}
+
+dt {
+    font-weight: 600;
+    color: var(--color-text);
+}
+
+dd {
+    margin: 0;
+}
+
+/* Links */
+a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: var(--color-link-hover);
+}
+
+/* Hobbies List */
+.hobbies {
+    list-style: none;
+    padding: 20px;
+}
+
+.hobbies li {
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.hobby-icon {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 8px;
+}

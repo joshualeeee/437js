@@ -25,8 +25,8 @@ function createNavbar() {
     navLinks.className = "nav-links hidden";
 
     const links = [
-        ["Home", "/index.html"],
-        ["Hobbies", "/hobbies.html"],
+        ["Home", "./index.html"],
+        ["Hobbies", "./hobbies.html"],
     ];
 
     for (const [text, href] of links) {

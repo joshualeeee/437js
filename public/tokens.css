@@ -1,0 +1,21 @@
+:root {
+    /* Color Tokens */
+    --color-background: #D3FAD6;
+    --color-text: #605C48;
+    --color-heading-bg: #D1EFB5;
+    --color-subheading-bg: #EDEBA0;
+    --color-navbar: #C3C48D;
+    --color-link: #BD1F00;
+    --color-link-hover: #8B1500;
+}
+
+:root.dark-mode{
+    --color-background: #605C48;
+    --color-text: #D3FAD6;
+    --color-heading-bg: #5f6b53;
+    --color-subheading-bg: #898765;
+    --color-navbar: #52533c;
+    --color-link: #BD1F00;
+    --color-link-hover: #8B1500;
+}
+

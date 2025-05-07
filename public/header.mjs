@@ -22,6 +22,7 @@ function createNavbar() {
     const links = [
         ["Home", "./index.html"],
         ["Hobbies", "./hobbies.html"],
+        ["Shopping", "./shopping.html"]
     ];
 
     for (const [text, href] of links) {

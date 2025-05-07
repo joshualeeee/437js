@@ -38,8 +38,11 @@ h2 {
 }
 
 /* Navigation */
+.navbar-container {
+    font-family: 'Quicksand', Arial, sans-serif;
+}
 
-.navbar {
+.navbar-container .navbar {
     background-color: var(--color-navbar);
     padding: 1rem 2rem;
     display: flex;
@@ -49,7 +52,7 @@ h2 {
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
-.nav-upper {
+.navbar-container .nav-upper {
     display: flex;
     align-items: center;
     color: var(--color-text);
@@ -58,18 +61,18 @@ h2 {
     justify-content: space-between;
 }   
 
-.nav-controls {
+.navbar-container .nav-controls {
     display: flex;
     align-items: center;
     gap: 1rem;
 }
 
-.nav-name {
+.navbar-container .nav-name {
     font-size: 1.5rem;
     font-weight: 700;
 }
 
-.nav-links {
+.navbar-container .nav-links {
     list-style: none;
     gap: 1rem;
     padding-left: 1rem;
@@ -78,7 +81,7 @@ h2 {
     align-items: center;
 }
 
-.menu-toggle {
+.navbar-container .menu-toggle {
     display: none;
     font-size: 1.5rem;
     background: none;
@@ -87,7 +90,7 @@ h2 {
     color: var(--color-text);
 }
 
-.dark-mode-toggle {
+.navbar-container .dark-mode-toggle {
     display: flex;
     align-items: center;
     gap: 0.5rem;
@@ -96,7 +99,7 @@ h2 {
     color: var(--color-text);
 }
 
-.dark-mode-toggle input[type="checkbox"] {
+.navbar-container .dark-mode-toggle input[type="checkbox"] {
     cursor: pointer;
     width: 16px;
     height: 16px;
@@ -106,28 +109,28 @@ h2 {
 
 /* Mobile-specific overrides */
 @media (max-width: 768px) {
-    .navbar {
+    .navbar-container .navbar {
         flex-direction: column;
         align-items: flex-start;
     }
 
-    .nav-upper {
+    .navbar-container .nav-upper {
         width: 100%;
     }
 
-    .nav-controls {
+    .navbar-container .nav-controls {
         margin-left: auto;
     }
 
-    .menu-toggle {
+    .navbar-container .menu-toggle {
         display: flex;
     }
 
-    .dark-mode-toggle {
+    .navbar-container .dark-mode-toggle {
         margin-right: auto;
     }
 
-    .nav-links {
+    .navbar-container .nav-links {
         flex-direction: column;
         align-items: flex-start;
         margin: 0;
@@ -138,20 +141,19 @@ h2 {
         background-color: var(--color-navbar);
     }
 
-    .nav-links li {
+    .navbar-container .nav-links li {
         width: 100%;
     }
 
-    .nav-links a {
+    .navbar-container .nav-links a {
         display: block;
         width: 100%;
     }
 
-    .nav-links.hidden {
+    .navbar-container .nav-links.hidden {
         display: none;
     }
 }
-
 
 .content {
     display: flex;
